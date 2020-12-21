@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Stay Connected" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Enter your email address and password" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimaryText"
+            android:text="to get access to your account" />
+
+        <EditText
+            android:id="@+id/etEmailAddress"
+            android:hint="Email"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="@drawable/edit_text_background"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:background="@drawable/edit_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Password"
+            android:textSize="16sp"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/etCnfPassword"
+            android:background="@drawable/edit_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Confirm Password"
+            android:textSize="16sp"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+        <Button
+            android:background="@drawable/btn_primary"
+            android:id="@+id/btnSignUp"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+            android:textColor="@color/colorPrimaryTextOpaque"
+            android:text="Sign Up" />
+
+        <TextView
+            android:id="@+id/textViewAlready"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            android:padding="15dp"
+            android:text="Already have an account? Login" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="177dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_wave" />
+</androidx.constraintlayout.widget.ConstraintLayout>

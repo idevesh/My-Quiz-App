@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "860542750552",
+    "project_id": "project-61ac9",
+    "storage_bucket": "project-61ac9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860542750552:android:c3072cc0ff2a2a55561f2d",
+        "android_client_info": {
+          "package_name": "com.workerunionsupport.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860542750552-muk4k037ghveo41gdu18kearcv9g606g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHGVbZ3ZWNFvyg7ceBPs0ULo882QXCLFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860542750552-muk4k037ghveo41gdu18kearcv9g606g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

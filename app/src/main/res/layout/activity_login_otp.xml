@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginOtp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Login Now" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimaryText"
+            android:text="Please Login to continue using app" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="226dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edit_text_background"
+                android:ems="10"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_primary"
+                android:text="Get OTP"
+                android:textColor="@color/colorPrimaryTextOpaque"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etOTP"
+            android:background="@drawable/edit_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="OTP"
+            android:maxLength="6"
+            android:textSize="16sp"
+            android:ems="6"
+            android:inputType="numberPassword" />
+
+        <Button
+            android:background="@drawable/btn_primary"
+
+            android:id="@+id/btnLogin"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryTextOpaque"
+            android:text="Log In" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            android:text="----------OR----------" />
+
+
+        <Button
+            android:id="@+id/btnEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            android:background="@drawable/btn_otp"
+            android:textColor="@color/colorPrimaryTextOpaque"
+            app:backgroundTint="@null"
+            android:text="Login with Email" />
+
+        <TextView
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            android:padding="15dp"
+            android:text="Don't have an account? Signup" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="177dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_wave" />
+</androidx.constraintlayout.widget.ConstraintLayout>
