@@ -75,7 +75,7 @@ class LoginOtp : AppCompatActivity() {
                 Log.d("TAG","onCodeSent:$verificationId")
                 this@LoginOtp.storedVerificationId = verificationId
                 resendToken = token
-                var intent = Intent(applicationContext,LoginOtp::class.java)
+                var intent = Intent(this@LoginOtp,LoginOtp::class.java)
                 intent.putExtra("storedVerificationId",storedVerificationId)
                 startActivity(intent)
             }
@@ -96,7 +96,7 @@ class LoginOtp : AppCompatActivity() {
         val options = PhoneAuthOptions.newBuilder(auth)
             .setPhoneNumber(number) // Phone number to verify
             .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-            .setActivity(this) // Activity (for callback binding)
+            .setActivity(this@LoginOtp) // Activity (for callback binding)
             .setCallbacks(callbacks) // OnVerificationStateChangedCallbacks
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)
@@ -106,7 +106,7 @@ class LoginOtp : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(applicationContext, HomeActivity::class.java))
+                    startActivity(Intent(this, HomeActivity::class.java))
                     finish()
                 } else {
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
