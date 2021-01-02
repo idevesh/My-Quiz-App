@@ -30,25 +30,25 @@ class LoginOtp : AppCompatActivity() {
                     storedVerificationId.toString(), otp)
                 signInWithPhoneAuthCredential(credential)
             }else{
-                Toast.makeText(this,"Enter OTP",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@LoginOtp,"Enter OTP",Toast.LENGTH_SHORT).show()
             }
         }
 
 
 
         btnSignUp.setOnClickListener {
-            val intent = Intent(this,SignupActivity::class.java)
+            val intent = Intent(this@LoginOtp,SignupActivity::class.java)
             startActivity(intent)
         }
 
         btnEmail.setOnClickListener {
-            val intent = Intent(this,LoginActivity::class.java)
+            val intent = Intent(this@LoginOtp,LoginActivity::class.java)
             startActivity(intent)
         }
 
         val currentUser = auth.currentUser
         if(currentUser != null) {
-            startActivity(Intent(applicationContext, HomeActivity::class.java))
+            startActivity(Intent(this@LoginOtp, HomeActivity::class.java))
         }
 
         btnOTP.setOnClickListener {
@@ -59,12 +59,12 @@ class LoginOtp : AppCompatActivity() {
         callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-                startActivity(Intent(applicationContext, HomeActivity::class.java))
+                startActivity(Intent(this@LoginOtp, HomeActivity::class.java))
                 finish()
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
-                Toast.makeText(applicationContext, "Failed", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@LoginOtp, "Failed", Toast.LENGTH_LONG).show()
             }
 
             override fun onCodeSent(
@@ -75,7 +75,7 @@ class LoginOtp : AppCompatActivity() {
                 Log.d("TAG","onCodeSent:$verificationId")
                 this@LoginOtp.storedVerificationId = verificationId
                 resendToken = token
-                var intent = Intent(this@LoginOtp,LoginOtp::class.java)
+                val intent = Intent(this@LoginOtp,LoginOtp::class.java)
                 intent.putExtra("storedVerificationId",storedVerificationId)
                 startActivity(intent)
             }
@@ -88,7 +88,7 @@ class LoginOtp : AppCompatActivity() {
             number= "+91$number"
             sendVerificationcode(number)
         }else{
-            Toast.makeText(this,"Enter mobile number", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@LoginOtp,"Enter mobile number", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -96,7 +96,7 @@ class LoginOtp : AppCompatActivity() {
         val options = PhoneAuthOptions.newBuilder(auth)
             .setPhoneNumber(number) // Phone number to verify
             .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-            .setActivity(this@LoginOtp) // Activity (for callback binding)
+            .setActivity(this) // Activity (for callback binding)
             .setCallbacks(callbacks) // OnVerificationStateChangedCallbacks
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)

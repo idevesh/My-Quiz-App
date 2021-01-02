@@ -2,4 +2,13 @@
     <string name="app_name">Retailers</string>
     <string name="moto">The WUS helps workers and trade unions in effectively dealing with issues of worker welfare and upliftment.</string>
     <string name="submoto">Empowering Workers</string>
+    <string name="get_otp">OTP</string>
+    <string name="etphone">Phone</string>
+    <string name="etOTP">OTP</string>
+    <string name="login_to_continue">Please Login to continue using app</string>
+    <string name="textLogin">Login Now</string>
+    <string name="btnLogin">Log In</string>
+    <string name="or">----------OR----------</string>
+    <string name="login_with_email">Login with Email</string>
+    <string name="dont_have_account">Don\'t have an account? Signup</string>
 </resources>

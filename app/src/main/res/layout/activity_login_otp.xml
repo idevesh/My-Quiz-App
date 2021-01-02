@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             style="@style/TextAppearance.AppCompat.Title"
             android:textColor="@color/colorPrimaryText"
-            android:text="Login Now" />
+            android:text="@string/textLogin" />
 
         <TextView
             android:id="@+id/textView4"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             style="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/colorPrimaryText"
-            android:text="Please Login to continue using app" />
+            android:text="@string/login_to_continue" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -46,7 +46,7 @@
                 android:layout_marginTop="32dp"
                 android:background="@drawable/edit_text_background"
                 android:ems="10"
-                android:hint="Phone"
+                android:hint="@string/etphone"
                 android:inputType="phone"
                 android:maxLength="10"
                 android:textSize="16sp" />
@@ -54,11 +54,11 @@
             <Button
                 android:id="@+id/btnOTP"
                 android:layout_width="wrap_content"
-                android:layout_height="29dp"
+                android:layout_height="42dp"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/btn_primary"
-                android:text="Get OTP"
+                android:text="@string/get_otp"
                 android:textColor="@color/colorPrimaryTextOpaque"
                 app:backgroundTint="@null" />
         </LinearLayout>
@@ -69,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="OTP"
+            android:hint="@string/etOTP"
             android:maxLength="6"
             android:textSize="16sp"
             android:ems="6"
@@ -83,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryTextOpaque"
-            android:text="Log In" />
+            android:text="@string/btnLogin" />
 
         <TextView
             android:id="@+id/textView6"
@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:textAlignment="center"
-            android:text="----------OR----------" />
+            android:text="@string/or" />
 
 
         <Button
@@ -103,7 +103,7 @@
             android:background="@drawable/btn_otp"
             android:textColor="@color/colorPrimaryTextOpaque"
             app:backgroundTint="@null"
-            android:text="Login with Email" />
+            android:text="@string/login_with_email" />
 
         <TextView
             android:id="@+id/btnSignUp"
@@ -112,7 +112,7 @@
             android:layout_marginTop="24dp"
             android:textAlignment="center"
             android:padding="15dp"
-            android:text="Don't have an account? Signup" />
+            android:text="@string/dont_have_account" />
 
     </LinearLayout>
 
